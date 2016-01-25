@@ -1,33 +1,36 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Phoenix ESC POS by PyramidTechnologies</title>
+    <meta name="description" content="Phoenix ESC POS : Quick examples to get you up and running with ESC/POS on the Phoenix Thermal Printer">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Phoenix ESC POS</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Phoenix ESC POS</h1>
-        <p>Quick examples to get you up and running with ESC/POS on the Phoenix Thermal Printer</p>
 
-        <p class="view"><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS">View the Project on GitHub <small>PyramidTechnologies/Phoenix-ESC-POS</small></a></p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS">View on GitHub</a>
 
+          <h1 id="project_title">Phoenix ESC POS</h1>
+          <h2 id="project_tagline">Quick examples to get you up and running with ESC/POS on the Phoenix Thermal Printer</h2>
 
-        <ul>
-          <li><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
         <h1>
 <a id="about-phoenix-thermal-printer" class="anchor" href="#about-phoenix-thermal-printer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Phoenix Thermal Printer</h1>
 
@@ -45,15 +48,44 @@
 <h2>
 <a id="firmware-and-harness" class="anchor" href="#firmware-and-harness" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Firmware and Harness</h2>
 
-<p>IMPORTANT: You must use the appropriate firmware and cable in order for this to function correctly. Look on the bottom of your Phoenix Printer to determine the model of your device. Refer to the table below to verify what you need:</p>
+<p><strong>IMPORTANT:</strong> You must use the appropriate firmware and cable in order for this to function correctly. Look on the bottom of your Phoenix Printer to determine the model of your device. Refer to the table below to verify what you need:</p>
 
-<p>Model | Firmware | Cable | Driver Required | Notes 
------------- | ------------- | ------------
-Pulse | Any* | No | DB9 | ESC/POS over DB9 only. USB is only used for configuration
-Pulse | S08 (ESC/POS over USB) | USB A to B | <a href="https://pyramidacceptors.com/apps/PTI_Unified_Serial_Driver_Installer.zip">yes</a> ESC/POS over both DB9 and USB as a virtual comm port
-USB | Win USB | USB A to B | <a href="https://pyramidacceptors.com/apps/PTI_Phoenix_Windows_Driver_109.zip">yes</a></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Firmware</th>
+<th>Cable</th>
+<th>Driver Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pulse</td>
+<td>Any*</td>
+<td>No</td>
+<td>DB9</td>
+<td>ESC/POS over DB9 only. USB is only used for configuration</td>
+</tr>
+<tr>
+<td>Pulse</td>
+<td>S08 (ESC/POS over USB)</td>
+<td>USB A to B</td>
+<td><a href="https://pyramidacceptors.com/apps/PTI_Unified_Serial_Driver_Installer.zip">Yes</a></td>
+<td>ESC/POS over both DB9 and USB as a virtual comm port</td>
+</tr>
+<tr>
+<td>USB</td>
+<td>Win USB</td>
+<td>USB A to B</td>
+<td><a href="https://pyramidacceptors.com/apps/PTI_Phoenix_Windows_Driver_109.zip">Yes</a></td>
+<td>Does not use serial port, true Printer USB class</td>
+</tr>
+</tbody>
+</table>
 
-<p>IMPORTANT: If you are using DB9, we recommend <a href="http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/">our harness</a>. If you decide to use your own harness, be sure that the RS-232 is not TTL (12v) or you will destroy the Phoenix.</p>
+<p><strong>IMPORTANT:</strong> If you are using DB9, we recommend <a href="http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/">our harness</a>. If you decide to use your own harness, be sure that the RS-232 is not TTL (12v) or you will destroy the Phoenix.</p>
 
 <h2>
 <a id="escpos-basics" class="anchor" href="#escpos-basics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESC/POS Basics</h2>
@@ -68,13 +100,57 @@ USB | Win USB | USB A to B | <a href="https://pyramidacceptors.com/apps/PTI_Phoe
 <p>At this point, we assume that you have your Phoenix Printer with the appropriate harness. If not, contact our support team and we'll get you on track.</p>
 
 <p>Launch your favorite serial emulator and configure for 9600 baud, 1 start bit, 1 stop bit, no parity. No handshaking settings are required or supported on the Phoenix.</p>
+
+<p>Print "Hello, Phoenix printer!"
+<code>48 65 6c 6c 6f 2c 20 50 68 6f 65 6e 69 78 20 70 72 69 6e 74 65 72 21</code></p>
+
+<p>Print the buffer, feed 1 line
+<code>0A</code></p>
+
+<p>Enable underline
+<code>1B 2D 01</code></p>
+
+<p>Print "This is underlined" (sorry no markdown for underline)
+<code>54 68 69 73 20 69 73 20 75 6e 64 65 72 6c 69 6e 65 64</code></p>
+
+<p>Print the buffer, feed 1 line
+<code>0A</code></p>
+
+<p>Enable double height
+<code>1D 21 01</code></p>
+
+<p>Disable underline
+<code>1B 2D 00</code> </p>
+
+<p>Print "##This is double height"
+<code>54 68 69 73 20 69 73 20 64 6f 75 62 6c 65 20 68 65 69 67 68 74</code></p>
+
+<p>Print the buffer, feed 1 line
+<code>0A</code></p>
+
+<p>Reset to normal character height
+<code>1D 21 00</code> </p>
+
+<p>Enable right justify
+<code>1B 61 02</code></p>
+
+<p>Print "Right justified"
+<code>52 69 67 68 74 20 6a 75 73 74 69 66 69 65 64</code></p>
+
+<p>Print the buffer, feed 1 line
+<code>0A</code></p>
       </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/PyramidTechnologies">PyramidTechnologies</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Phoenix ESC POS maintained by <a href="https://github.com/PyramidTechnologies">PyramidTechnologies</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
+
     
+
   </body>
 </html>
