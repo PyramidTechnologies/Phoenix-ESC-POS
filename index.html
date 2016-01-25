@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Phoenix ESC POS by PyramidTechnologies</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Phoenix ESC POS</h1>
+        <p>Quick examples to get you up and running with ESC/POS on the Phoenix Thermal Printer</p>
+
+        <p class="view"><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS">View the Project on GitHub <small>PyramidTechnologies/Phoenix-ESC-POS</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/PyramidTechnologies/Phoenix-ESC-POS">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="about-phoenix-thermal-printer" class="anchor" href="#about-phoenix-thermal-printer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Phoenix Thermal Printer</h1>
+
+<p>The Phoenix Thermal Printer by Pyramid Technologies provides a ESC/POS compatible printer interface over DB9 or USB connections. True Windows printer models are also available for XP through Windows 10.</p>
+
+<h2>
+<a id="what-you-need" class="anchor" href="#what-you-need" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What you need</h2>
+
+<ol>
+<li>Phoenix Printer</li>
+<li>Proper harness for your model (see Firmware section below)</li>
+<li>A serial emulator program</li>
+</ol>
+
+<h2>
+<a id="firmware-and-harness" class="anchor" href="#firmware-and-harness" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Firmware and Harness</h2>
+
+<p>IMPORTANT: You must use the appropriate firmware and cable in order for this to function correctly. Look on the bottom of your Phoenix Printer to determine the model of your device. Refer to the table below to verify what you need:</p>
+
+<p>Model | Firmware | Cable | Driver Required | Notes 
+------------ | ------------- | ------------
+Pulse | Any* | No | DB9 | ESC/POS over DB9 only. USB is only used for configuration
+Pulse | S08 (ESC/POS over USB) | USB A to B | <a href="https://pyramidacceptors.com/apps/PTI_Unified_Serial_Driver_Installer.zip">yes</a> ESC/POS over both DB9 and USB as a virtual comm port
+USB | Win USB | USB A to B | <a href="https://pyramidacceptors.com/apps/PTI_Phoenix_Windows_Driver_109.zip">yes</a></p>
+
+<p>IMPORTANT: If you are using DB9, we recommend <a href="http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/">our harness</a>. If you decide to use your own harness, be sure that the RS-232 is not TTL (12v) or you will destroy the Phoenix.</p>
+
+<h2>
+<a id="escpos-basics" class="anchor" href="#escpos-basics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESC/POS Basics</h2>
+
+<p>ESC/POS is protocol for sending data to printers. The basic commands are more or less standardized across vendors but there are slight variations in the more complex command sequences. Will be covering the simple, generic commands such as font styling. In our examples, we will be transmitting ESC/POS data as hexidecimal through our serial emulator because it is more consistent that hoping between ASCII, decimal, and hex.</p>
+
+<p>From the host point of view (yours), there is no flow control or CRC commands to worry about. Simply transmit you commands and let the Phoenix handle the rest. If there are errors in your commands, ESC/POS is the type of protocol that silently fails. That means that malformed commands will be ignored. As a rule of thumb, start with single commands and then chain together more and more are debugging your application.</p>
+
+<h2>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup</h2>
+
+<p>At this point, we assume that you have your Phoenix Printer with the appropriate harness. If not, contact our support team and we'll get you on track.</p>
+
+<p>Launch your favorite serial emulator and configure for 9600 baud, 1 start bit, 1 stop bit, no parity. No handshaking settings are required or supported on the Phoenix.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/PyramidTechnologies">PyramidTechnologies</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
