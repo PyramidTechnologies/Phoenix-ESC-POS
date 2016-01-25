@@ -1,0 +1,13 @@
+48 65 6c 6c 6f 2c 20 50 68 6f 65 6e 69 78 20 70 72 69 6e 74 65 72 21 // Hello, Phoenix printer!
+0A // Print buffer and feed line
+1B 2D 01 // Enable underline
+54 68 69 73 20 69 73 20 75 6e 64 65 72 6c 69 6e 65 64 // This is underlined
+0A // Print buffer and feed line
+1D 21 01 // Double height
+1B 2D 00 // Disable underline
+54 68 69 73 20 69 73 20 64 6f 75 62 6c 65 20 68 65 69 67 68 74 // This is double height
+0A // Print buffer and feed line
+1D 21 00 // Normal character height
+1B 61 02 // Right justified
+52 69 67 68 74 20 6a 75 73 74 69 66 69 65 64 // Right justified
+0A // Print buffer and feed line
