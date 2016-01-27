@@ -16,7 +16,7 @@ The Phoenix Thermal Printer by Pyramid Technologies provides a ESC/POS compatibl
 | E-PHX | E-PHX (Full ESC/POS over USB) | USB A to B | [Yes](https://pyramidacceptors.com/apps/PTI_Unified_Serial_Driver_Installer.zip) | ESC/POS over USB|
 | USB | Win USB | USB A to B | [Yes](https://pyramidacceptors.com/apps/PTI_Phoenix_Windows_Driver_109.zip) | Does not use serial port, true Printer USB class
 
-**IMPORTANT:** If you are using DB9, we recommend [our harness](http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/).  
+**IMPORTANT:** If you are using DB9, we recommend [our harness](http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/).
 
 ## Setup
 At this point, we assume that you have your Phoenix Printer with the appropriate harness. If not, contact our support team and we'll get you on track.
@@ -27,7 +27,7 @@ _Note_: For DB9 connection, you may manually override the serial settings via Ph
 
 
 ## ESC/POS Basics
-ESC/POS is protocol for sending data to printers. The basic commands are more or less standardized across vendors but there are slight variations in the more complex command sequences. Will be covering the simple, generic commands such as font styling. In our examples, we will be transmitting ESC/POS data as hexidecimal through our serial emulator because it is more consistent that hoping between ASCII, decimal, and hex.
+ESC/POS is a protocol for sending data to printers. The basic commands are more or less standardized across vendors but there are slight variations in the more complex command sequences. We will be covering the simple, generic commands such as font styling. In our examples, we will be transmitting ESC/POS data as hexidecimal through our serial emulator because it is more consistent than jumping between ASCII, decimal, and hex.
 
 From the host point of view (yours), there is no flow control or CRC commands to worry about. Simply transmit you commands and let the Phoenix handle the rest. If there are errors in your commands, ESC/POS is the type of protocol that silently fails. That means that malformed commands will be ignored. As a rule of thumb, start with single commands and then chain together more and more.
 
@@ -35,7 +35,7 @@ ESC/POS commands are processed in the order in which they are received. A comman
 
 `[bold command] [some text] [italic command] [print command]`
 
-This only print "some text" in bold. No text data was sent after the italic command so no text was in the buffer to be formatted.  Now, we continue sending commands... 
+This only prints "some text" in bold. No text data was sent after the italic command so no text was in the buffer to be formatted.  Now, we continue sending commands... 
 
 `[some more text] [print command]`  
 
