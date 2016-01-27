@@ -106,7 +106,7 @@
 <h2>
 <a id="escpos-basics" class="anchor" href="#escpos-basics" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ESC/POS Basics</h2>
 
-<p>ESC/POS is protocol for sending data to printers. The basic commands are more or less standardized across vendors but there are slight variations in the more complex command sequences. Will be covering the simple, generic commands such as font styling. In our examples, we will be transmitting ESC/POS data as hexidecimal through our serial emulator because it is more consistent that hoping between ASCII, decimal, and hex.</p>
+<p>ESC/POS is a protocol for sending data to printers. The basic commands are more or less standardized across vendors but there are slight variations in the more complex command sequences. We will be covering the simple, generic commands such as font styling. In our examples, we will be transmitting ESC/POS data as hexidecimal through our serial emulator because it is more consistent than jumping between ASCII, decimal, and hex.</p>
 
 <p>From the host point of view (yours), there is no flow control or CRC commands to worry about. Simply transmit you commands and let the Phoenix handle the rest. If there are errors in your commands, ESC/POS is the type of protocol that silently fails. That means that malformed commands will be ignored. As a rule of thumb, start with single commands and then chain together more and more.</p>
 
@@ -114,7 +114,7 @@
 
 <p><code>[bold command] [some text] [italic command] [print command]</code></p>
 
-<p>This only print "some text" in bold. No text data was sent after the italic command so no text was in the buffer to be formatted.  Now, we continue sending commands... </p>
+<p>This only prints "some text" in bold. No text data was sent after the italic command so no text was in the buffer to be formatted.  Now, we continue sending commands... </p>
 
 <p><code>[some more text] [print command]</code>  </p>
 
