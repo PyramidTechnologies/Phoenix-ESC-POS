@@ -16,7 +16,7 @@ The Phoenix Thermal Printer by Pyramid Technologies provides a ESC/POS compatibl
 | E-PHX | E-PHX (Full ESC/POS over USB) | USB A to B | [Yes](https://pyramidacceptors.com/apps/PTI_Unified_Serial_Driver_Installer.zip) | ESC/POS over USB|
 | USB | Win USB | USB A to B | [Yes](https://pyramidacceptors.com/apps/PTI_Phoenix_Windows_Driver_109.zip) | Does not use serial port, true Printer USB class
 
-**IMPORTANT:** If you are using DB9, we recommend [our harness](http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/). If you decide to use your own harness, be sure that the voltage is *not* RS-232 logic level (12v) or you will destroy the Phoenix. Your harness must use 5v TTL.
+**IMPORTANT:** If you are using DB9, we recommend [our harness](http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/).  
 
 ## Setup
 At this point, we assume that you have your Phoenix Printer with the appropriate harness. If not, contact our support team and we'll get you on track.
