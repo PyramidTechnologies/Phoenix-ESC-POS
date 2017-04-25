@@ -1,0 +1,8 @@
+title: Phoenix ESC POS
+description: Quick examples to get you up and running with ESC/POS on the Phoenix Thermal Printer
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-slate
+
+gems:
+  - jekyll-mentions
