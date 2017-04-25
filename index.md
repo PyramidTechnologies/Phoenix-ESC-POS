@@ -100,6 +100,6 @@ Print the buffer, feed 1 line
 `0A`
 
 ## Going Further
-ESC/POS is a huge protocol with many varities and we work hard to keep our implementation consistent. A complete PDF outlining our command set is available here: https://pyramidacceptors.com/pdf/ESC_POS_Protocol_Commands_REV_B.pdf
+ESC/POS is a huge protocol with many varities and we work hard to keep our implementation consistent. A complete PDF outlining our command set is available here: [https://pyramidacceptors.com/pdf/PHX_ESC_POS_Protocol.pdf](https://pyramidacceptors.com/pdf/PHX_ESC_POS_Protocol.pdf)
 
 If you have question please feel free to create an issue/question on Github or contact our support team.
