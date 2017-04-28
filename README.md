@@ -25,6 +25,10 @@ Launch your favorite serial emulator and configure your port for 9600 baud, 1 st
 
 _Note_: For DB9 connection, you may manually override the serial settings via Phoenix Tools under the Comm Settings -> Baud & Parity menu. The default 9600 is great for testing.  
 
+## SDK Is Now Available!
+Checkout our ThermalTalk SDK on Github https://github.com/PyramidTechnologies/ThermalTalk
+This will handle all the low-level ESC/POS and supports both Phoenix and Reliance thermal printers. If you want to make
+you own, learn about ESC/POS, or build from our library, please continue reading the next section.
 
 ## ESC/POS Basics
 ESC/POS is a protocol for sending data to printers. The basic commands are more or less standardized across vendors but there are slight variations in the more complex command sequences. We will be covering the simple, generic commands such as font styling. In our examples, we will be transmitting ESC/POS data as hexidecimal through our serial emulator because it is more consistent than jumping between ASCII, decimal, and hex.
