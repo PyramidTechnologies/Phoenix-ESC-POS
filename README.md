@@ -13,8 +13,7 @@ The Phoenix Thermal Printer by Pyramid Technologies provides a ESC/POS compatibl
 |-------|----------|-------|-----------------|-------|
 | Pulse | Any* | No | DB9 | ESC/POS over DB9 only. USB is only used for configuration |
 | Pulse | S08 (Full ESC/POS) | DB9 | No | ESC/POS over DB9 |
-| E-PHX | E-PHX (Full ESC/POS over USB) | USB A to B | [Yes](https://pyramidacceptors.com/apps/PTI_Unified_Serial_Driver_Installer.zip) | ESC/POS over USB|
-| USB | Win USB | USB A to B | [Yes](https://pyramidacceptors.com/apps/PTI_Phoenix_Windows_Driver_109.zip) | Does not use serial port, true Printer USB class
+| USB | Win USB | USB A to B | [Yes](https://pyramidacceptors.com/apps/PTI_Phoenix_Windows_Driver_109.zip) | Does not use serial port, true Printer USB class |
 
 **IMPORTANT:** If you are using DB9, we recommend [our harness](http://shop.pyramidacceptors.com/phoenix-rj-45-to-db-9-harness-phx-5p002/).
 
